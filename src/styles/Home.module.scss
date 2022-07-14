@@ -1,0 +1,15 @@
+.form{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin:0 auto;
+  flex-direction:column;
+  height: 100vh;
+
+  input{
+    margin-bottom: 20px;
+    width: 300px;
+    padding: 10px;
+  }
+}
