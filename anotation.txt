@@ -1,0 +1,30 @@
+Na autenticação é legal guardar as informações nos cookes, porque podemos acessar ele no front ou back-end.
+nela podemos guardar o token e o refreshtoken. Principalmente quando a app é next.
+
+BIBLIOTECA DE COOKES
+Nookies--> armazenar informações no cookies.
+--> yarn add nookies
+setcookies --> guarda as informações nos cookies.
+Recebe 3 parametros(1- contexto da req,geralmente é setado como undefined, 2- Nome do cookie, 3- o valor do token)
+o undefined é setado por causa do navegador.
+podemos passar informações adicionais depois do 3 params: {
+          maxAge: 60*60*24*30,//30 dias -- tempo de expriração do token
+         path: '/'//quais caminho vai ter acesso ao cookie, nesse caso qualquer endereço vai ter acesso
+}
+
+
+____________________ RECUPERANDO TOKEN DO SSR: _________________________
+
+
+a withSSRGuest é uma função que recebe como parametro uma outra função. São chamadas de higher order function
+
+
+--VALIDAÇÃO DE PAGINA DO USUSÁRIO LOGADO--
+--PERMIÇÕES---
+
+instalar o jwt-decode ==> serve para decodificar o token e pegar as informações dentro dele.
+
+logaut em todas as abas usando o BROADCASTING CHANNEL ==> Faz com que as abas estejam conectadas uma das outras quando estão na mesma rede.
+
+
+

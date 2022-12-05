@@ -1,6 +1,9 @@
+import { GetServerSideProps } from 'next';
 import { FormEvent, useState } from 'react'
 import { useAuth } from '../context/AuthContext';
+import { parseCookies } from 'nookies';
 import styles from '../styles/Home.module.scss'
+import { withSSRGuest } from '../utils/withSSRGuest';
 
 export default function Home () {
 
@@ -16,7 +19,7 @@ export default function Home () {
     password
    }
    
-   await signIn(data);
+   await signIn(data)
  }
 
   return (
@@ -29,3 +32,11 @@ export default function Home () {
   )
 }
 
+
+//Verificação de authenticação pelo srr
+//a função getserverSide recebe uma função que recebe como parametro outra função
+export const getServerSideProps = withSSRGuest (async (ctx) =>{
+  return{
+    props:{}
+  }
+})
